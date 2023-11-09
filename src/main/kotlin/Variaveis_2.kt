@@ -1,5 +1,5 @@
 fun main() {
-    var t: Int = 19
+    var t:Int = 19
     var str:String = "Total"
 
     t++
@@ -8,7 +8,7 @@ fun main() {
     println("Printando número: ${t}")
     println("Printando nome: ${str}")
 
-    var B:Boolean = false
+    var B:Boolean = true
 
     println(B)
 }

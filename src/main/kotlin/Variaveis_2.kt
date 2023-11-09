@@ -7,4 +7,8 @@ fun main() {
 
     println("Printando número: ${t}")
     println("Printando nome: ${str}")
+
+    var B:Boolean = false
+
+    println(B)
 }

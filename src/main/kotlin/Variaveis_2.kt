@@ -1,6 +1,6 @@
 fun main() {
-    val t: Int = 19
-    val str:String = "Total"
+    var t: Int = 19
+    var str:String = "Total"
 
     t++
     str+= " Perfeito"

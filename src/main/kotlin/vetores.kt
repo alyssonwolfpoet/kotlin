@@ -4,6 +4,7 @@ fun vetor_inteiros(){
         print("${numeros[i]} ")
     }
     print("\n")
+    println("Acessando a sexta posição: ${numeros[6]} ")
 }
 fun vetor_inteiros2(){
     var n = Array(10,{i->i})
@@ -12,7 +13,24 @@ fun vetor_inteiros2(){
     }
     print("\n")
 }
+fun vetor_bool(){
+    var a = booleanArrayOf(true,false,true,true,true,false)
+    for (i in 0..a.size-1){
+        print("${a[i]} ")
+    }
+    print("\n")
+}
+fun vetor_str(){
+    var a = arrayOf("Fortaleza","São paulo","bonito")
+    for (i in 0..a.size-1){
+        print("${a[i]} ")
+    }
+    print("\n")
+    println("Acessando o primeiro elemento: ${a[0]}")
+}
 fun main() {
     vetor_inteiros()
     vetor_inteiros2()
+    vetor_bool()
+    vetor_str()
 }

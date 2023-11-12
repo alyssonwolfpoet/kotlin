@@ -28,9 +28,27 @@ fun vetor_str(){
     print("\n")
     println("Acessando o primeiro elemento: ${a[0]}")
 }
+fun vetor_char(){
+    var a = arrayOf("a","b","c")
+    for (i in 0..a.size-1){
+        print("${a[i]} ")
+    }
+    print("\n")
+    println("Acessando o primeiro elemento: ${a[0]}")
+}
+fun vetor_float(){
+    var a = floatArrayOf(0.0f,1.1f,2.2f)
+    for (i in 0..a.size-1){
+        print("${a[i]} ")
+    }
+    print("\n")
+    println("Acessando o primeiro elemento: ${a[0]}")
+}
 fun main() {
     vetor_inteiros()
     vetor_inteiros2()
     vetor_bool()
     vetor_str()
+    vetor_char()
+    vetor_float()
 }

@@ -1,4 +1,4 @@
-fun naturais(){
+/*fun naturais(){
     println("\"Conjunto dos Números Naturais\"\n")
     println("\"N = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, …}\"\n")
     inteiros()
@@ -21,4 +21,4 @@ fun reais(){
 }
 fun main() {
     naturais()
-}
+}*/

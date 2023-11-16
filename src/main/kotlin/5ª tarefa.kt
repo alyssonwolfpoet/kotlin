@@ -9,7 +9,7 @@ fun main() {
 
     for (i in 0 until linhas){
         for (j in 0 until colunas){
-            matriz[i][j] = Random.nextFloat()
+            matriz[i][j] = Random.nextFloat()*100
         }
     }
 

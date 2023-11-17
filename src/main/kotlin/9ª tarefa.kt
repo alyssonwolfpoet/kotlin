@@ -10,5 +10,5 @@ fun HoraToHoraminuto(horas: Int){
 }
 fun main() {
     MinuToHoraminuto(90)
-    HoraToHoraminuto(5)
+    HoraToHoraminuto(3)
 }

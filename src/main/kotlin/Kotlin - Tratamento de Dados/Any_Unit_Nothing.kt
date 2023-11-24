@@ -6,13 +6,16 @@ fun main() {
     b()
     //c()
 }
-fun a(valor:Any){
+
+fun a(valor: Any) {
     println("Imprimindo o valor: $valor")
 }
-fun b():Unit{
+
+fun b(): Unit {
     println("Função sem retorno (void)")
 }
-fun c():Nothing{
+
+fun c(): Nothing {
     // TODO: ("Função ainda a ser completada")
     // A -> B
 }

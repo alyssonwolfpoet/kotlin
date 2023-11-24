@@ -18,6 +18,7 @@ fun b(): Unit {
 fun c(): Nothing {
     // TODO: ("Função ainda a ser completada")
     // A -> B
+    return TODO("Provide the return value")
 }
 //fun save():Nothing{}
 //fun update():Nothing{}

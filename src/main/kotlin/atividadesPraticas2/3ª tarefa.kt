@@ -1,5 +1,9 @@
 package atividadesPraticas2
 
+fun validarNotaComUmaCasaDecimal(notaString: String): Boolean {
+    val partes = notaString.split(".")
+    return partes.size == 2 && partes[1].length == 1 && partes[1][0].isDigit()
+}
 
 fun main() {
     val notas = DoubleArray(6)
@@ -11,15 +15,19 @@ fun main() {
             if (notas[i] < 0 || notas[i] > 10) {
                 throw IllegalArgumentException()
             }
-//            val aux = notas[i]
-//            else if (notas[i] != "%.1f".format(notas[i]).toDouble()) {
-//                println("test ${notas[i]}")
-//                println("%.1f".format(notas[i]))
-//                throw IllegalArgumentException("Valor com mais de uma casa deciamal")
+
+            var notaString = notas[i].toString()
+
+//            while (!notaString.matches(Regex("""\d+.\d"""))) {
+//                println("A nota deve ter apenas uma casa decimal. Digite novamente:")
+//                notaString = readlnOrNull() ?: throw NumberFormatException("Formato inválido")
 //            }
+            while (!validarNotaComUmaCasaDecimal(notaString)) {
+                println("A nota deve ter apenas uma casa decimal. Digite novamente:")
+                notaString = readlnOrNull() ?: throw NumberFormatException("Formato inválido")
+            }
         }
 
-        //notas.forEach { println(it) }
         println("Media das notas: ${notas.average()}")
     } catch (e: NumberFormatException) {
         println("Formato invalido")

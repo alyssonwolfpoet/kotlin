@@ -6,7 +6,7 @@ import java.util.Scanner
 
 fun main() {
 
-    var arquivo = File("C:\\Users\\Alysson\\IdeaProjects\\kotlin\\src\\main\\kotlin\\atividadesPraticas2\\strings.1txt")
+    var arquivo = File("C:\\Users\\Alysson\\IdeaProjects\\kotlin\\src\\main\\kotlin\\atividadesPraticas2\\strings.txt")
     try {
         Scanner(arquivo).use { l->
             while (l.hasNext()){

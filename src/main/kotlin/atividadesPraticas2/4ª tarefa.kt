@@ -7,16 +7,15 @@ fun main() {
         var salarioBruto = readlnOrNull()?.toDouble()!!
         println("Salário Bruto informado: R$$salarioBruto")
         println("Desconto: ")
-            if (salarioBruto > 6000) {
-                println((salarioBruto / 100) * 11)
-            } else if (salarioBruto > 3000) {
-                println((salarioBruto / 100) * 7.5)
-            }else if (salarioBruto <=3000){
-                println((salarioBruto / 100) * 4.0)
-            }
-            else if (salarioBruto < salarioMinimoAtual) {
-                throw IllegalArgumentException()
-            }
+        if (salarioBruto > 6000) {
+            println((salarioBruto / 100) * 11)
+        } else if (salarioBruto > 3000) {
+            println((salarioBruto / 100) * 7.5)
+        } else if (salarioBruto <= 3000) {
+            println((salarioBruto / 100) * 4.0)
+        } else if (salarioBruto < salarioMinimoAtual) {
+            throw IllegalArgumentException()
+        }
 
     } catch (e: NumberFormatException) {
         println("formato não é um número")

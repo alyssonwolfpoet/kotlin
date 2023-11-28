@@ -1,6 +1,6 @@
 package KotlinOrientaçãoaoObjeto
 
-class animal_(var especie: String) {
+class Animal_(var especie: String) {
     var fala: String = ""
 
     init {
@@ -22,5 +22,7 @@ class animal_(var especie: String) {
 }
 
 fun main() {
-
+    val animal = Animal_("Cachorro")
+    Animal_("Gato").falar()
+    Animal_("Cachorro").fala
 }

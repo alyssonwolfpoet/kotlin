@@ -1,16 +1,19 @@
 package AtividadesPráticas3
 
 class Animal(val nome:String,val tipo:String,val fala:String,val idade:Int) {
+
     fun  printAnimal(){
         println("Nome: ${this.nome}\nTipo: ${this.tipo}\nFala: ${this.fala}\nIdade: ${this.idade}")
     }
 
     companion object {
-        var Nanimal:Int = 0
+        var Nanimal: Int =0
+
         fun contaAnimal(Nanimal:Int){
-            println(" numeros de animais: ${++this.Nanimal}")
+            println(" numeros de animais: ${this.Nanimal}")
         }
         init {
+            Nanimal++
             contaAnimal(Nanimal)
         }
     }

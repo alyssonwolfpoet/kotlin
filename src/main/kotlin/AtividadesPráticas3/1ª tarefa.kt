@@ -9,7 +9,7 @@ class Animal(val nome:String,val tipo:String,val fala:String,val idade:Int) {
         println("numeros de animais: $Nanimal")
     }
     fun animalfalar(){
-        println("Animal falando: $fala")
+        println("Animal: $nome falando: $fala")
     }
 
     companion object {

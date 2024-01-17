@@ -7,7 +7,7 @@ class Carros(var consumodegasolina:Int,var cor:Int,var tipodomotor:Int,var marca
     private val cores = arrayOf("azul","prata","preto")
     private val marcas = arrayOf("chevrolet","fiat","hyundai")
     private val tiposMotores = arrayOf("1.0 MT","TotalFlex com 3 cilindros em linha e 4 válvulas por cilindro","1.0 aspirado de três cilindros com 80 cv de potência ")
-    private var estecarro:Int? = null
+
     private fun consumo(consumodegasolina: Int): String {
         if (this.consumodegasolina ==15){
             return "o modelo do carro (escolhido por você): ${dadosCarro()} \nStatus:é econômico."
@@ -21,27 +21,33 @@ class Carros(var consumodegasolina:Int,var cor:Int,var tipodomotor:Int,var marca
     }
 
     private fun dadosCarro():String{
-        return "\nmarca: ${marcas.get(marca)} \nmordelo: ${modelos.get(modelo)} \ncor: ${cores.get(cor)} \ntipo do motor: ${tiposMotores.get(tipodomotor)} \nodometro:  ${odômetro}"
+        return "\nmarca: ${marcas.get(marca)} \nmordelo: ${modelos.get(modelo)} \ncor: ${cores.get(cor)} \ntipo do motor: ${this.tiposMotores[tipodomotor]} \nodometro:  ${odômetro}"
     }
 
     companion object{
-        var quant:Int = 0
-        var melhorcarror:Int = 0
-        var melhorConsumo:Int = 0
+        var melhorcarror: String? = null
+        var melhorConsumo:Int? = null
+
+        fun printMelhor(){
+            println(melhorcarror)
+        }
 
     }
 
-    private fun MelhorCarro(var estecarroaux:Int,var consumodegasolinaaux:Int){
-        if (consumodegasolinaaux < melhorConsumo){
+    private fun MelhorCarro(consumodegasolinaaux:Int){
+        if (melhorcarror == null && melhorConsumo == null ){
             melhorConsumo = consumodegasolinaaux
-            melhorcarror = estecarroaux
+            melhorcarror = dadosCarro()
+        }
+        else if (consumodegasolinaaux < melhorConsumo!!){
+            melhorConsumo = consumodegasolinaaux
+            melhorcarror = dadosCarro()
         }
     }
     init {
-        estecarro = ++quant
         println(consumo(consumodegasolina))
         println()
-        MelhorCarro(estecarro!!,consumodegasolina)
+        MelhorCarro(consumodegasolina)
 
     }
 }
@@ -50,4 +56,6 @@ fun main() {
     var car1:Carros = Carros(15,1,1,1,10f,1)
     var car2:Carros = Carros(7,2,2,2,0f,2)
     var car3:Carros = Carros(50,3,3,3,0f,3)
+
+    Carros.printMelhor()
 }

@@ -1,7 +1,5 @@
 package AtividadesPráticas3
 
-import AtividadesPráticas3.Carros.Companion.melhorcarror
-
 class Carros(var consumodegasolina:Int,var cor:Int,var tipodomotor:Int,var marca:Int, var odômetro:Float ,var modelo:Int)  {
     private val modelos = arrayOf("Chevrolet Onix","Volkswagen Gol","Hyundai HB20")
     private val cores = arrayOf("azul","prata","preto")

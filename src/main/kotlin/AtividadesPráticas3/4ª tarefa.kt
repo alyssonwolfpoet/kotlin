@@ -1,38 +1,47 @@
 package AtividadesPráticas3
 
-class Produto (){
+class Produto() {
     private lateinit var nome: String
     private var preco: Float = 0.0f
     private var qtd_estoque: Int = 0
 
-    fun get_nome():String {
+    fun get_nome(): String {
         return nome
     }
 
-    fun get_preco():Float {
+    fun get_preco(): Float {
         return preco
     }
 
-    fun get_estoque():Int {
+    fun get_estoque(): Int {
         return qtd_estoque
     }
 
-    fun atualizar_preco(novo_preco:Float) {
+    fun atualizar_preco(novo_preco: Float) {
         preco = novo_preco
     }
 
-    fun atualizar_estoque(quantidade:Int) {
-        if (qtd_estoque - quantidade < 0)
+    fun atualizar_estoque(quantidade: Int) {
+        if (qtd_estoque - quantidade < 0) {
             println("cuidado deixara o estoque negativo")
-        else {
-            qtd_estoque -= quantidade
+        } else {
+            println("1 - aumentar\n2 - diminuir")
+            var op = readln().toInt()
+            if (op == 1) {
+                qtd_estoque += quantidade
+            } else if (op == 2) {
+                qtd_estoque - +quantidade
+            } else {
+                println("Invalido")
+            }
         }
 
-        if (qtd_estoque <= 5){
+
+
+        if (qtd_estoque <= 5) {
             println("Produto em quantidade baixa, fazer novo pedido com urgência")
         }
-
-        if (qtd_estoque>100){
+        if (qtd_estoque > 100) {
             preco = (preco * 0.4).toFloat()
             println("Quantidade alta do $nome, favor oferecer com 40% de desconto")
         }
